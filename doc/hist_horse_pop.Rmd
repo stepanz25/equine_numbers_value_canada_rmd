@@ -1,6 +1,7 @@
 ---
 title: "Historical horse population in Canada"
 bibliography: references.bib
+
 params:
   province: "British Columbia"
 output:
@@ -57,7 +58,7 @@ horse_plot
 
 We can see from the visualisation above that Ontario, Saskatchewan and Alberta have had the highest horse populations in Canada. All provinces have had a decline in horse populations since 1940. This is likely due to the rebound of the Canadian automotive industry after the Great Depression and the Second World War. An interesting follow-up visualization would be car sales per year for each Province over the time period visualised above to further support this hypothesis.
 
-Next we look at the range of the number horses for each provinces at any time point between `r min(horse_pop$Ref_Date)` - `r max(horse_pop$Ref_Date)`:
+Next we look at the range of the number horses for each provinces at any time point between  `r min(horse_pop$Ref_Date)` - `r max(horse_pop$Ref_Date)`:
 
 ```{r max horse table}
 max_horses <- horse_pop %>% 
@@ -86,5 +87,7 @@ province_plot <- horse_pop %>%
   theme(axis.text.x = element_text(angle = 90, hjust = 1))
 province_plot
 ```
+
+
 
 ## References
