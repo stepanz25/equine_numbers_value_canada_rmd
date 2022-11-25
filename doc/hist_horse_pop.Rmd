@@ -74,6 +74,7 @@ knitr::kable(max_horses, caption = "Table 1. Minimum and Maximum number of horse
 Below we zoom in and look at the province of `r params$province`:
 
 ```{r plot province, fig.width=5, fig.height=4, fig.cap = "Figure 2. Number of horses for a Canadian province of focus.", out.width = "50%", fig.align='center', warning=FALSE}
+
 province_plot <- horse_pop %>% 
   filter(GEO == params$province) %>% 
   ggplot(aes(x = Ref_Date, y = Value)) +
@@ -85,6 +86,7 @@ province_plot <- horse_pop %>%
   facet_grid(~GEO) +
   scale_y_continuous(labels = scales::comma) +
   theme(axis.text.x = element_text(angle = 90, hjust = 1))
+
 province_plot
 ```
 
