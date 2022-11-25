@@ -67,7 +67,7 @@ max_horses <- horse_pop %>%
   group_by(Province) %>% 
   summarize(Maximum = max(Value),
             Minimum = min(Value))
-knitr::kable(max_horses, caption = "Table 1. Minimum and Maximum number of horses in Canadian provinces between 1940 and 1972.") |> 
+knitr::kable(max_horses, caption = "Table 1. Minimum (min) and Maximum (max) number of horses in Canadian provinces between 1940 and 1972.") |> 
   kableExtra::kable_styling(full_width = FALSE)
 ```
 
